@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+button {
+  padding: 15px;
+  text-transform: uppercase;
+
+  border:0;
+  border-radius: 15px;
+  cursor: pointer;
+
+  color: #fff;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.Posts, .Post-Details {
+  width: 100%;
+  height: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+  .Posts .Post, .Post-Details .Post {
+    min-width:600px;
+    max-width: 800px;
+
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+
+    background-color: lemonchiffon;
+    border-radius: 15px;
+
+    color: rgb(73, 70, 41);
+
+    cursor: pointer;
+  }
+
+  .Posts .Post:hover {
+    background-color: rgb(253, 245, 173);
+  }
+
+    .Post .Post-created, .Post .Post-id {
+      font-weight: bold;
+    }
+
+    .Post .Post-text {
+      width:100%;
+    }
+
+  .Posts .Add-Post-Button {
+    background-color: rgb(138, 134, 97);
+    color: #FFF;
+    margin-bottom: 10px;
+  }
+
+
+  .Post-Edit {
+    width:50%;
+    height:100%;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    .Post-Edit .Post-Content {
+
+      width: 80%;
+      min-height: 300px;
+
+      resize: vertical;
+
+      padding: 15px;
+      margin-bottom: 20px;
+
+      font-size: 18px;
+
+      word-wrap: break-word;
+    }
+
+
+    .Post-Edit .Save-Post-Button {
+      background-color: darkolivegreen;
+      width:200px;
+    }
+
+    .Post-Edit .Save-Post-Button:hover {
+      background-color: rgb(55, 70, 31);
+    }
+
+    .Post-Edit .Cancel-Button {
+
+      position: absolute;
+      top:15px;
+      right:15px;
+
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      padding: 0;
+
+      background-color: rgb(107, 47, 47);
+    }
+
+    .Post-Edit .Cancel-Button:hover {
+      background-color: rgb(66, 29, 29);
+    }
+
+.Post-Details {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .Post-Details .Post {
+    cursor: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .Post-Details button {
+    width: 100px;
   }
-}
+
+  .Post-Details .Post-delete {
+    background-color: rgb(116, 30, 30);
+    margin-right: 30px;
+  }
+
+  .Post-Details .Post-delete:hover {
+    background-color: rgb(88, 23, 23);
+  }
+
+  .Post-Details .Post-edit {
+    background-color: rgb(30, 50, 116);
+  }
+
+  .Post-Details .Post-edit:hover {
+    background-color: rgb(20, 32, 73);
+  }
